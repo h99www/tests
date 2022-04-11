@@ -1,0 +1,22 @@
+#server port
+server:
+  port: 8001
+
+spring:
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: C##GREEDY
+    password: GREEDY
+    url: jdbc:log4jdbc:oracle:thin:@localhost:1521:xe
+    hikari:
+      auto-commit: false
+  # jpa config
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    database: oracle
+    properties:
+      name: jpatest
+      hibernate:
+        '[format_sql]': true
